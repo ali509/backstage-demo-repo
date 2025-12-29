@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: backstage-demo-repo
   annotations:
+    backstage.io/techdocs-ref: value
     github.com/project-slug: ali509/backstage-demo-repo
 spec:
   type: service
