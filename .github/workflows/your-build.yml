@@ -2,4 +2,17 @@ name: Build and Deploy
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # <--- This allows manual triggers via API/Backstage
+  workflow_dispatch: # This allows manual triggers via Backstage
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a demo deployment step
+        run: |
+          echo "Starting deployment process..."
+          echo "Triggered manually or by push."
+          # Add your actual build/deploy commands here
